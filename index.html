@@ -193,7 +193,7 @@
             <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
                 <div class="flex items-center gap-3 cursor-pointer" onclick="showPage('landing')">
                     <span class="text-2xl font-black italic tracking-tighter text-white">MAT-J</span>
-                    <span class="text-[8px] sm:text-[9px] font-medium tracking-[0.2em] sm:tracking-[0.3em] text-gray-300 uppercase border-l border-white/20 pl-3">MSFS Acrobat Team Japan</span>
+                    <span class="text-[8px] sm:text-[9px] font-medium tracking-[0.2em] sm:tracking-[0.3em] text-gray-400 uppercase border-l border-white/20 pl-3">MSFS Acrobat Team Japan</span>
                 </div>
                 
                 <div class="hidden lg:flex space-x-8 text-[10px] font-bold tracking-widest">
@@ -253,7 +253,7 @@
                             <i class="fas fa-info-circle"></i> 私たちの活動
                         </a>
                         <a href="javascript:void(0)" onclick="scrollInLanding('signals')" class="hero-btn btn-amber">
-                            <i class="fas fa Bullhorn"></i> リーダー合図一覧
+                            <i class="fas fa-bullhorn"></i> リーダー合図一覧
                         </a>
                         <a href="javascript:void(0)" onclick="scrollInLanding('maneuvers')" class="hero-btn btn-white">
                             <i class="fas fa-plane"></i> 演目一覧
@@ -516,7 +516,7 @@
         </main>
 
         <footer class="py-16 text-center text-[10px] text-gray-400 border-t border-white/10">
-            <p class="tracking-[0.4em] uppercase mb-2 text-gray-300">Formation Flight Team MAT-J</p>
+            <p class="tracking-[0.4em] uppercase mb-2 text-gray-400">Formation Flight Team MAT-J</p>
             <p class="font-light">© 2024 MSFS Acrobat Team Japan. All Rights Reserved.</p>
         </footer>
     </div>
@@ -592,27 +592,27 @@
         }
 
         const rawMembers = [
-            { name: "syogo", role: "創始者" },
-            { name: "KE64", role: "創始者" },
-            { name: "Georgesaiching", role: "リーダー", yt: "https://youtube.com/@gsaiching?si=2V9vX737MG2Vc2v5" },
-            { name: "Duck1954 (DUCK)", role: "リーダー", yt: "https://youtube.com/@duck19540630?si=IeX24K9ygpGgPMwh" },
-            { name: "HAGALAZ13", role: "リーダー" },
-            { name: "テツたる", role: "システム開発", yt: "https://youtube.com/@taru-maguro?si=JkwA2UYIZmDV11l6" },
-            { name: "Izumigame", role: "開発/リーダー", yt: "https://youtube.com/@izumigame-k6w?si=QT07GaxHDm9zfQPP" },
-            { name: "Spitice", role: "システム開発" },
-            { name: "あひる航空", role: "塗装開発/広報", yt: "https://www.youtube.com/@ahiru_airlines" },
-            { name: "ぽぴ", role: "広報/サイト運営", yt: "https://youtube.com/@asembledpoppy?si=X7dM3swPzqqCCeJd_" },
-            { name: "DELTA", role: "広報", yt: "https://youtube.com/@deltaairforce?si=U9ocrCK9ML3tF9w9" },
-            { name: "UKAKA", role: "演目用作成", yt: "https://youtube.com/@ukaka5656?si=dgvYLFIgGWPwts6W" },
-            { name: "BATAKEN1852", role: "メンバー" },
-            { name: "Speedair one", role: "メンバー" },
-            { name: "ｼﾅﾓｿ", role: "メンバー", yt: "https://youtube.com/@snm0s0?si=03ID6nZGgM3kpmbb" },
-            { name: "あちゅパパ", role: "メンバー" },
-            { name: "ぽよぽんRW", role: "メンバー" },
-            { name: "Ponchan", role: "メンバー" },
-            { name: "ロンコン", role: "メンバー" },
-            { name: "そらこ♪nao", role: "メンバー" },
-            { name: "taktak1956", role: "メンバー" }
+            { name: "syogo", role: "創始者", x: "syogo_295" },
+            { name: "KE64", role: "創始者", x: "ke64j" },
+            { name: "Georgesaiching (G隊長)", role: "リーダー", x: "GeorgeSaiching", yt: "https://youtube.com/@gsaiching?si=2V9vX737MG2Vc2v5" },
+            { name: "Duck1954 (DUCK)", role: "リーダー", x: "1954Duck", yt: "https://youtube.com/@duck19540630?si=IeX24K9ygpGgPMwh" },
+            { name: "HAGALAZ13", role: "リーダー", x: "HAGALAZ_13" },
+            { name: "テツたる", role: "システム開発", x: "popoyo337", yt: "https://youtube.com/@taru-maguro?si=JkwA2UYIZmDV11l6" },
+            { name: "Izumigame", role: "開発/リーダー", x: "izumigame_fs", yt: "https://youtube.com/@izumigame-k6w?si=QT07GaxHDm9zfQPP" },
+            { name: "Spitice", role: "システム開発", x: "spitice0" },
+            { name: "あひる航空", role: "塗装開発/広報", x: "Bobwat131", yt: "https://www.youtube.com/@ahiru_airlines" },
+            { name: "ぽぴ", role: "広報/サイト運営", x: "AssembledPoppy", yt: "https://youtube.com/@asembledpoppy?si=X7dM3swPzqqCCeJd_" },
+            { name: "DELTA", role: "広報", x: "DeltaVRC", yt: "https://youtube.com/@deltaairforce?si=U9ocrCK9ML3tF9w9" },
+            { name: "UKAKA", role: "演目用作成", x: "ukaka5656", yt: "https://youtube.com/@ukaka5656?si=dgvYLFIgGWPwts6W" },
+            { name: "BATAKEN1852", role: "メンバー", x: "BATAKEN1852" },
+            { name: "Speedair one", role: "メンバー", x: "speedairone" },
+            { name: "ｼﾅﾓｿ", role: "メンバー", x: "snm0S0", yt: "https://youtube.com/@snm0s0?si=03ID6nZGgM3kpmbb" },
+            { name: "あちゅパパ", role: "メンバー", x: "EEguchi55" },
+            { name: "ぽよぽんRW", role: "メンバー", x: "PoyoponRW75217" },
+            { name: "Ponchan", role: "メンバー", x: "mutsumi01210" },
+            { name: "ロンコン", role: "メンバー", x: "qW67J81t1DxZJ8X" },
+            { name: "そらこ♪nao", role: "メンバー", x: "sora_sky2022" },
+            { name: "taktak1956", role: "メンバー", x: "taktak1956" }
         ];
 
         const members = rawMembers.map(m => ({ ...m, role: `MAT-J Member / ${m.role}` }));
@@ -669,11 +669,16 @@
         function init() {
             const memberList = document.getElementById('member-list');
             if(memberList) {
-                memberList.innerHTML = members.map(m => `
+                memberList.innerHTML = members.map(m => {
+                    const avatarUrl = m.x ? `https://unavatar.io/twitter/${m.x}` : null;
+                    return `
                     <div class="glass-card p-4 flex items-center justify-between border-l-2 border-blue-400 hover:bg-white/10 transition group text-white">
                         <div class="flex items-center gap-4">
-                            <div class="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center text-gray-300 group-hover:text-blue-400 transition">
-                                <i class="fas fa-user-pilot text-lg"></i>
+                            <div class="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center text-gray-300 group-hover:text-blue-400 transition overflow-hidden">
+                                ${avatarUrl ? 
+                                    `<img src="${avatarUrl}" class="w-full h-full object-cover" onerror="this.parentElement.innerHTML='<i class=\'fas fa-user-pilot text-lg\'></i>'">` : 
+                                    `<i class="fas fa-user-pilot text-lg"></i>`
+                                }
                             </div>
                             <div>
                                 <div class="text-sm font-light tracking-widest mb-1 uppercase">${m.name}</div>
@@ -682,7 +687,7 @@
                         </div>
                         ${m.yt ? `<a href="${m.yt}" target="_blank" class="text-gray-400 hover:text-red-400 transition-colors px-2"><i class="fab fa-youtube text-lg"></i></a>` : ''}
                     </div>
-                `).join('');
+                `}).join('');
             }
 
             const signalGrid = document.getElementById('signal-grid');
