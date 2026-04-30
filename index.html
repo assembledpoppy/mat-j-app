@@ -10,8 +10,8 @@
         @import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600&family=Exo+2:wght@200;400;700;900&family=Noto+Sans+JP:wght@300;400;700&display=swap');
 
         body {
-            font-family: 'Exo 2', 'Noto Sans JP', sans-serif;
-            background-color: #1e293b; /* 明るめのスレート/ネイビーに変更 */
+            font-family: 'Exo+2', 'Noto Sans JP', sans-serif;
+            background-color: #1e293b; /* 明るめのスレート/ネイビー */
             color: #fff;
             margin: 0;
             overflow-x: hidden;
@@ -64,13 +64,12 @@
         }
 
         .sky-bg {
-            /* 背景グラデーションを少し明るい色調に調整 */
             background: radial-gradient(circle at center, #334155 0%, #0f172a 100%);
             background-attachment: fixed;
         }
 
         .glass-card {
-            background: rgba(255, 255, 255, 0.08); /* 視認性のために少し不透明度をアップ */
+            background: rgba(255, 255, 255, 0.08);
             backdrop-filter: blur(12px);
             border: 1px solid rgba(255, 255, 255, 0.15);
             border-radius: 12px;
@@ -129,7 +128,7 @@
         section { scroll-margin-top: 80px; }
 
         .recruit-card {
-            background: linear-gradient(135deg, rgba(50, 50, 60, 0.8), rgba(30, 35, 45, 0.95)); /* 少し明るく */
+            background: linear-gradient(135deg, rgba(50, 50, 60, 0.8), rgba(30, 35, 45, 0.95));
             border: 1px solid rgba(255, 255, 255, 0.15);
         }
 
@@ -163,7 +162,6 @@
             background: rgba(127, 29, 29, 0.4) !important;
         }
 
-        /* Routing Classes */
         .page-view {
             display: none;
             min-height: 100vh;
@@ -331,7 +329,7 @@
                             </div>
                             <div class="glass-card p-8">
                                 <h3 class="text-lg font-bold text-white mb-4">離陸滑走ルール</h3>
-                                <p class="text-sm text-gray-300 font-light mb-4">ボイスチャットを使用しないため、離陸にも独自のルールを設けております。</p>
+                                <p class="text-sm text-gray-400 font-light mb-4">ボイスチャットを使用しないため、離陸にも独自のルールを設けております。</p>
                                 <img src="tizyoutakeoff.jpg" alt="離陸ルール" class="content-image" onerror="this.style.display='none'">
                             </div>
                         </div>
@@ -437,8 +435,9 @@
                     <!-- テツたるさん -->
                     <div class="glass-card p-8 border-l-4 border-emerald-500/50 bg-white/5 flex flex-col h-full">
                         <div class="flex items-center gap-4 mb-6">
-                            <div class="w-12 h-12 bg-emerald-500/20 rounded-full flex items-center justify-center">
-                                <i class="fas fa-code text-emerald-400"></i>
+                            <div class="w-12 h-12 bg-emerald-500/20 rounded-full flex items-center justify-center overflow-hidden border border-emerald-500/30">
+                                <img src="https://unavatar.io/twitter/popoyo337" class="w-full h-full object-cover" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+                                <i class="fas fa-code text-emerald-400 hidden"></i>
                             </div>
                             <h3 class="text-2xl font-bold text-white">テツたるさん</h3>
                         </div>
@@ -459,8 +458,9 @@
                     <!-- ゆーすさん -->
                     <div class="glass-card p-8 border-l-4 border-indigo-500/50 bg-white/5 flex flex-col h-full">
                         <div class="flex items-center gap-4 mb-6">
-                            <div class="w-12 h-12 bg-indigo-500/20 rounded-full flex items-center justify-center">
-                                <i class="fas fa-broadcast-tower text-indigo-400"></i>
+                            <div class="w-12 h-12 bg-indigo-500/20 rounded-full flex items-center justify-center overflow-hidden border border-indigo-500/30">
+                                <img src="https://unavatar.io/twitter/Yuus_429" class="w-full h-full object-cover" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+                                <i class="fas fa-broadcast-tower text-indigo-400 hidden"></i>
                             </div>
                             <h3 class="text-2xl font-bold text-white">ゆーすさん</h3>
                         </div>
@@ -516,7 +516,7 @@
         </main>
 
         <footer class="py-16 text-center text-[10px] text-gray-400 border-t border-white/10">
-            <p class="tracking-[0.4em] uppercase mb-2 text-gray-400">Formation Flight Team MAT-J</p>
+            <p class="tracking-[0.4em] uppercase mb-2 text-gray-300">Formation Flight Team MAT-J</p>
             <p class="font-light">© 2024 MSFS Acrobat Team Japan. All Rights Reserved.</p>
         </footer>
     </div>
@@ -542,21 +542,18 @@
 
         menuToggle.addEventListener('click', toggleMenu);
 
-        // Router Implementation
+        // Router
         function showPage(pageId, sectionId = null) {
-            // Hide all pages
             document.querySelectorAll('.page-view').forEach(view => {
                 view.classList.remove('active');
             });
 
-            // Show target page
             const target = document.getElementById(`view-${pageId}`);
             if (target) {
                 target.classList.add('active');
                 window.scrollTo(0, 0);
             }
 
-            // Scroll to section if provided
             if (sectionId) {
                 setTimeout(() => {
                     const section = document.getElementById(sectionId);
