@@ -9,11 +9,7 @@
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600&family=Exo+2:wght@200;400;700;900&family=Noto+Sans+JP:wght@300;400;700&display=swap');
 
-        body {Maneuvers detailのボントンロールをクリックすると画像名[bonton]が一緒に出てくるように表示
-
-下方開花をクリックすると画像名[kaika]が一緒に出てくるように表示
-
-パーティカルキューピットの文言をバーティカルキューピッドへ変更し、クリックすると画像名[cupid]が一緒に出てくるように表示
+        body {
             font-family: 'Exo 2', 'Noto Sans JP', sans-serif;
             background-color: #1a1a1a;
             color: #fff;
@@ -168,8 +164,8 @@
         }
         .modal.active { display: flex; }
 
-        .image-placeholder {
-            @apply w-full bg-white/5 border border-dashed border-white/20 rounded-xl flex flex-col items-center justify-center p-8 my-6 text-gray-500 text-xs tracking-widest uppercase;
+        .content-image {
+            @apply w-full h-auto rounded-xl border border-white/10 shadow-lg my-6 block;
         }
 
         @keyframes emergency-pulse {
@@ -293,10 +289,7 @@
                                 <p>ゲーム内では非常に操作性がよく2020/2024で幅広く使われております。</p>
                                 <p>現在ではイタリア空軍フレッチェトリコローリとチリ空軍が採用。今でも現役で空を飛んでおります。</p>
                                 
-                                <div class="image-placeholder">
-                                    <i class="fas fa-image text-3xl mb-2 opacity-20"></i>
-                                    
-                                </div>
+                                <img src="fadein.jpg" alt="MB-339" class="content-image" onerror="this.style.display='none'">
                             </div>
                         </div>
                     </div>
@@ -320,34 +313,25 @@
                             <p>飛んでいる最中のMAT-J集団に途中合流する場合は一番最後尾番号または空いているポジションへ入ります。</p>
                         </div>
 
-                        <div class="image-placeholder">
-                            <i class="fas fa-image text-3xl mb-2 opacity-20"></i>
-                            
-                        </div>
+                        <img src="formationpatern.jpg" alt="編隊飛行隊形" class="content-image" onerror="this.style.display='none'">
                     </div>
 
                     <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
                         <div class="glass-card p-8">
                             <h3 class="text-lg font-bold text-white mb-4">演目進入ルート</h3>
                             <p class="text-sm text-gray-400 font-light mb-4">MAT-Jでは各演目に進入角度が決まっております。</p>
-                            <div class="image-placeholder h-40">
-                                
-                            </div>
+                            <img src="runwaysinnyu.jpg" alt="進入ルート" class="content-image" onerror="this.style.display='none'">
                         </div>
                         <div class="glass-card p-8">
                             <h3 class="text-lg font-bold text-white mb-4">離陸滑走ルール</h3>
                             <p class="text-sm text-gray-400 font-light mb-4">ボイスチャットを使用しないため、離陸にも独自のルールを設けております。</p>
-                            <div class="image-placeholder h-40">
-                                
-                            </div>
+                            <img src="tizyoutakeoff.jpg" alt="離陸ルール" class="content-image" onerror="this.style.display='none'">
                         </div>
                     </div>
 
                     <div class="glass-card p-8">
                         <h3 class="text-lg font-bold text-white mb-4">地上タキシングルール</h3>
-                        <div class="image-placeholder h-64">
-                            
-                        </div>
+                        <img src="tizyoutaxi.jpg" alt="地上タキシングルール" class="content-image" onerror="this.style.display='none'">
                     </div>
                 </div>
             </div>
@@ -582,18 +566,18 @@
             { id: "m4", name: "バレルロール", rw: "斜め", smk: "白SMK", signal: "デルタでRW手前から白SMKオン上昇開始", proc: "リーダーとの位置合わせに集中。スロットルは上昇時100%付近、降下時80%付近をリーダーと合わせる。" },
             { id: "m5", name: "上方開花", rw: "直角", smk: "白SMK", signal: "RW手前で白SMKオン デルタ進入", proc: "垂直上昇から指定の方向へ開く。開いた後360度ロールし水平飛行に戻る。" },
             { id: "m6", name: "鬼灯（ほおずき）", rw: "直角", smk: "無し", signal: "周回中に赤・緑SMKの交互出し デルタ進入", proc: "垂直上昇時に赤SMKオン。頂点付近で緑に変更し、降下開始で指定方向に散開。地上付近で白SMKに変更。" },
-            { id: "m7", name: "ボントンロール", rw: "斜め", smk: "白SMK", signal: "周回中に赤SMK+ロール合図", proc: "RW直上のリーダーSMKオフから0.5秒後SMKオフ、1秒後に右1回転ロール。ロール後は全機再度白SMKをオンにする。", image: "" },
+            { id: "m7", name: "ボントンロール", rw: "斜め", smk: "白SMK", signal: "周回中に赤SMK+ロール合図", proc: "RW直上のリーダーSMKオフから0.5秒後SMKオフ、1秒後に右1回転ロール。ロール後は全機再度白SMKをオンにする。", image: "bonton.jpg" },
             { id: "m8", name: "ワイドトゥデルタループ", rw: "直角", smk: "白SMK", signal: "前のボントンとセット", proc: "ワイドV字で進入しループ上昇しつつ通常V字デルタへ変形。頂点で全機通常デルタを完成させる。" },
             { id: "m9", name: "反転レインフォール", rw: "直角", smk: "緑SMK", signal: "周回中に緑SMK点滅ありは反転RF", proc: "下りの垂直姿勢のタイミングで各機180度ロールし、リーダーから離れる方向に散開。地上付近で再度180度ロールし水平へ。" },
             { id: "m10", name: "ループ", rw: "平行", smk: "白SMK", signal: "平行進入+白SMK", proc: "ループ回数はリーダーの気分次第。頂点付近でのスロットル調整が鍵（75～85%前後）。" },
-            { id: "m11", name: "バーティカルキューピッド", rw: "直角", smk: "無し", signal: "周回中に赤の長SMK+エアブレーキ開", proc: "リーダー合図で2列縦隊へ隊形変更、RW上で白SMKオン. 垂直上昇しハートを描く。最後尾2機が矢を描く。", image: "" },
+            { id: "m11", name: "バーティカルキューピッド", rw: "直角", smk: "無し", signal: "周回中に赤の長SMK+エアブレーキ開", proc: "リーダー合図で2列縦隊へ隊形変更、RW上で白SMKオン. 垂直上昇しハートを描く。最後尾2機が矢を描く。", image: "cupid.jpg" },
             { id: "m12", name: "スタークロス", rw: "南⇒北", smk: "白", signal: "周回中に黄の長SMK、真南から真北方向へV字デルタで進入", proc: "下方開花から指定方向に散開。リーダーの「スモーク」合図で白SMKを出し、各機交差して星を描く。" },
             { id: "m13", name: "レベルオープナー", rw: "直角", smk: "白", signal: "周回中に緑の長SMK+ラダーで尻振り", proc: "各列15度刻みで外側に水平に開く。合図から3秒後に左側、その1秒後に右側が順に展開。" },
             { id: "m14", name: "サンライズ", rw: "直角", smk: "白", signal: "周回中に緑の長SMK+翼左右振り", proc: "横はオープナーと同じ展開。縦はリーダー30度、2・3番機は15度で上昇し、扇状に開く。" },
             { id: "m15", name: "チェンジオーバーターン", rw: "平行", smk: "白", signal: "周回中に白・赤のSMKの交互出し後、白SMKで進入時に1秒間赤SMK", proc: "トレイル隊形へ変更、赤SMKで右旋回しつつワイドV字へ。スロットルは95%固定でリーダーに合わせる。" },
             { id: "m16", name: "チェンジオーバーループ", rw: "平行", smk: "白", signal: "周回中に白・緑のSMKの交互出し後、白SMKで進入時に1秒間緑SMK", proc: "トレイル隊形からループ開始、頂点でデルタへ変形. 下降中に隊形を整え、地上付近で完成させる。" },
             { id: "m17", name: "360°ターン", rw: "平行", smk: "無し", signal: "RW上で白SMKオン+バンク開始", proc: "リーダーとの位置合わせに集中。内側機はスロットルを絞り、外側機は100%以上で回る。" },
-            { id: "m18", name: "下方開花", rw: "直角", smk: "白", signal: "周回中に大きく翼振り（左右）デルタで進入", proc: "RW通過後ループ開始、頂点で白SMKオン. 指定の5方向に散開し、地上付近で水平に戻る。", image: "" },
+            { id: "m18", name: "下方開花", rw: "直角", smk: "白", signal: "周回中に大きく翼振り（左右）デルタで進入", proc: "RW通過後ループ開始、頂点で白SMKオン. 指定の5方向に散開し、地上付近で水平に戻る。", image: "kaika.jpg" },
             { id: "m19", name: "レインフォール", rw: "直角", smk: "白", signal: "周回中に緑SMK点滅、V字デルタへ", proc: "V字デルタで直角進入。垂直上昇から頂点へ行き、下りの垂直姿勢で一斉に散開。" },
             { id: "m20", name: "ローリングコンバットピッチ", rw: "平行", smk: "白", signal: "周回中にエルロンで翼振り（左）", proc: "左エシュロン隊形へ変更。RW上で右に1回転ロール後、そのまま着陸態勢へ移行する。" },
             { id: "m21", name: "コンバットブレイク", rw: "平行", smk: "無し", signal: "周回中にエルロンで翼振り（右）", proc: "右エシュロン隊形へ変更。RW上でリーダーから3秒間隔で順に右へ離脱し、着陸パターンに入る。" },
@@ -673,11 +657,8 @@
                             </div>
                         ` : ''}
                         ${item.image ? `
-                            <div class="mb-6 overflow-hidden rounded-xl border border-white/10 shadow-2xl bg-black/40 p-2">
-                                <div class="image-placeholder !my-0 !h-auto min-h-[200px]">
-                                    <i class="fas fa-image text-3xl mb-2 opacity-20"></i>
-                                    ${item.image}
-                                </div>
+                            <div class="mb-6 overflow-hidden rounded-xl border border-white/10 shadow-2xl bg-black/40">
+                                <img src="${item.image}" alt="${item.name}" class="w-full h-auto block" onerror="this.parentElement.style.display='none'">
                             </div>
                         ` : ''}
                         <div class="grid grid-cols-1 md:grid-cols-2 gap-4 text-[12px]">
